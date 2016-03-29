@@ -1,0 +1,6 @@
+db_server_name=postgresql
+db_host_name=localhost
+db_port=5432
+db_name=service_monitor
+user_name=postgres
+password=password

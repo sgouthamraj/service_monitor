@@ -1,0 +1,21 @@
+<table class="table table-condensed">
+	<tr>
+		<th>Service Name</th>
+		<th>Status</th>
+		{{#registeredUser}}
+		<td>&nbsp;</td>
+		{{/registeredUser}}
+	</tr>
+	{{#services}}
+	<tr class="{{StatusFlag}} service-entry" data-product="{{product}}" data-environment="{{environment}}" data-service="{{DisplayName}}">
+		<td>{{DisplayName}}</td>
+		<td>{{Status}}</td>
+		{{#registeredUser}}
+		<td><span class="fav-icon fa fa-star-o" data-prefered=false data-service="{{DisplayName}}"></span></td>
+		{{/registeredUser}}
+	</tr>
+	<tr class="service-detail-tr">
+		<td class="service-detail-td" colspan="2" id="{{DisplayName}}"></td>
+	</tr>
+	{{/services}}
+</table>

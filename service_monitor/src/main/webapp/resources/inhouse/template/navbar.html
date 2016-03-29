@@ -1,0 +1,85 @@
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Xome-WebTool</a>
+            </div>
+            <!-- /.navbar-header -->
+
+	<div id="guest-user">
+	<ul class="nav navbar-top-links navbar-right">
+		<li class="divider-vertical"></li>
+		<li class="dropdown"><a class="dropdown-toggle" href="#"
+			data-toggle="dropdown">Sign Up <strong class="caret"></strong></a>
+			<div class="dropdown-menu"
+				style="padding: 15px; padding-bottom: 10px;">
+				<input style="margin-bottom: 15px;" type="email" pattern=".*@xome.com$"
+					placeholder="Username" id="username-sign-up" name="username"> <input
+					style="margin-bottom: 15px;" type="password" placeholder="Password"
+					id="password-sign-up" name="password"> <input
+					style="margin-bottom: 15px;" type="password"
+					placeholder="Confirm Password" id="confirm-password-sign-up" name="password">
+					<span id="sign-up-password-error">The entered passwords doesn't match</span>
+				<button class="btn btn-primary btn-block disabled" id="sign-up" disabled="disabled">Sign
+					Up</button>
+			</div></li>
+
+		<li class="divider-vertical"></li>
+		<li class="dropdown"><a class="dropdown-toggle" href="#"
+			data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
+			<div class="dropdown-menu"
+				style="padding: 15px; padding-bottom: 10px;">
+				<input style="margin-bottom: 15px;" type="email" pattern=".*@xome.com$"
+					placeholder="Username" id="username-sign-in" name="username"> <input
+					style="margin-bottom: 15px;" type="password" placeholder="Password"
+					id="password-sign-in" name="password">
+				<button class="btn btn-primary btn-block disabled" id="sign-in" value="" disabled="disabled">Sign
+					In</button>
+			</div></li>
+	</ul>
+	</div>
+
+	<div id="registered-user">
+		<ul class="nav navbar-top-links navbar-right">
+			<li style="padding-top: 7px">
+				<button class="btn btn-primary btn-block" id="sign-out"
+					>Sign Out</button>
+
+			</li>
+		</ul>
+	</div>
+
+	<div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">                       
+                        <li>
+                            <a href="#" class="menu-item"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="#" class="menu-item"><i class="fa fa-bar-chart-o fa-fw"></i> Products<span class="fa arrow"></span></a>
+                            {{#data}}
+                            <ul class="nav nav-second-level">
+                                <li>
+                                     <a href="#" data-product="{{product}}" class="menu-item"> {{product}}<span class="fa arrow"></span></a>
+                                     <ul class="nav nav-third-level">
+                                     	{{#environments}}
+										<li>
+											<a href="#" data-product="{{product}}" data-environment="{{environment}}" class="menu-item">{{environment}}</a>
+										</li>
+									 	{{/environments}}
+									 </ul>
+                                </li>
+                            </ul>
+                            {{/data}}
+                        </li>
+                     </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
