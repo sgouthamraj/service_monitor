@@ -1,0 +1,12 @@
+.service-detail-tr {
+	display : none;
+} 
+
+.service-entry {
+	cursor: pointer;
+}
+
+.service-detail-td {
+	width: 480px; 
+	height: 400px;
+}
